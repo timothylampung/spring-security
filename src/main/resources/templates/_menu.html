@@ -1,18 +1,49 @@
-<div xmlns:th="http://www.thymeleaf.org"
-     style="border: 1px solid #ccc;padding:5px;margin-bottom:20px;">
+<div xmlns:th="http://www.thymeleaf.org">
 
-    <a th:href="@{/}">Home</a>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Timothy Lampung</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" th:href="@{/welcome}">Welcome</a>
+                    </li>
 
-    | &nbsp;
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#team">Refree</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" th:href="@{/userInfo}">User Info</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" th:href="@{/admin}">Admin</a>
+                    </li>
 
-    <a th:href="@{/userInfo}">User Info</a>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" th:if="${#request.userPrincipal != null}" th:href="@{/logout}">Logout</a>
+                    </li>
 
-    | &nbsp;
+                </ul>
+            </div>
 
-    <a th:href="@{/admin}">Admin</a>
 
-    | &nbsp;
-
-    <a th:if="${#request.userPrincipal != null}" th:href="@{/logout}">Logout</a>
+        </div>
+    </nav>
 
 </div>
